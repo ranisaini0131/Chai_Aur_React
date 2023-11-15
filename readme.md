@@ -70,3 +70,8 @@ But if there too many updated send on network oneafter another then it is not go
 => Reconciliation
 The algorithm React uses to diff one tree with another to determine which parts need to be changed.
 Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM."
+
+\***\*\*\*\*\***Props
+=> Props are read-only data passed down from parent component to child component,likw we used Card components in App Component, so we can send data into Card Component from App Componenet using props.
+=>In function we have the access of props
+=> They are immutable and cannot change their value once they have been assigned
