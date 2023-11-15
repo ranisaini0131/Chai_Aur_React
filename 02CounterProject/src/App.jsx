@@ -7,15 +7,18 @@ function App() {
 
   // let counter = 13, after using useState no need of thos becuase it can't changed the values on UI
 
-  let [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(0);
   
   const addValue = () => {
     if (counter < 20) {
       setCounter(counter + 1);
-     }
-  }
+      // setCounter(counter => counter + 1);// counter ki previous state me +1 krre h.
+      // setCounter(counter => counter + 1);
+      // setCounter(counter => counter + 1);
+      // setCounter(counter => counter + 1);
+    }
 
-  
+  }
 
   const removeValue = () => {
     if (counter > 0) {
