@@ -1,5 +1,6 @@
 => React after compilation converts into HTML+CSS+JS, browser ko HTML+CSS+JS hi samjh aati hai.
 => React makes easy to manage and buil complex froentnd where we are handling state changes in multiple componenets.
+=>React actually helps us to update the UI, on 1 variable change it reacts on many places.
 
 => React is Libarary. Libraries are cool, we can change anything accoding to our need, Frameworks are like millitary, they worked as it is they were written.
 => Props in React are properties of JS.
@@ -29,7 +30,7 @@ JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes i
 =>It allows us to make custom tags.
 Rules:=
 
-1. componenets extension should be .jsx
+1. components extension should be .jsx
 2. Componenet name should be start from capital letter.
 3. JSX will return only one element, so [<></>] called fragments used, inside this other elements used.
 
@@ -38,4 +39,34 @@ Injection of js file into index.html
 =>But In Vite, it directly added into index.html using script tag
 
 Why it is called SPA
-=> becuase here is only 1 index.html file and only one root element fetchedd by DOM, we are manipulating it only, so it is SPA without any refresh
+=> becuase here is only 1 index.html file and only one root element fetched by DOM, we are manipulating it only, so it is SPA without any refresh
+
+\***\*\*\*\*\***\*\*\*\*\***\*\*\*\*\***index.html me jo div create krte h, use main.jsx [jo main js file hoti h], usme target krte h by using DOM, or uss div me apne componenets ko render krwate h using render methods**\*\***\*\***\*\***
+
+=>In react, using {} we can evaluate the JavaScript values or output dynamically, {} = Evaluated expression
+
+=> onClick={addValue} is correct not {addValue()}, becuase we want to execute it on click, not with the code
+
+=> Hooks are like functions, every hook responsible for performing a particular task.
+=> UseState() = it is responsible for the propogation of changed variables on UI
+Usage-
+const [counter, setCounter]= useState()
+-> setCounter is a function for updating counter variable, in useState() here we can give anything for initialization, this will initialize counter variable
+-> It acts as a bridge, whatever the changes happens in variable, it propogate on UI
+
+\***\*\*\*\*\***\*\*\***\*\*\*\*\***Virtual DOM(abb use ni hota, but padhna zaruri h)**\*\***\***\*\***
+
+createRoot() creates a DOM (tree) like structure behind the scene, it creates virtual DOM to compare it with the main DOM, and update only the changes happening (not the full DOM), thats why it doesn't refreash page everytime.
+Whereas the DOM of Browser, repaint the whole DOM on every reload
+
+So, Js creates DOM to track the changes aand the replace the changes constantly, called Virtual DOM
+But if there too many updated send on network oneafter another then it is not good, to optimizely manage Virtual DOM for this, we use React Fiber.
+
+=>React Fibre helps us in updating UI, if there are muliple updates, then it will directly update the UI by final update.
+=>Other key features include the ability to pause, abort, or reuse work as new updates come in; the ability to assign priority to different types of updates; and new concurrency primitives.
+
+=> Hydration is the process, when the page loads the button and images loaded first, but they didn't work then when the JS injects then it will work, the process of injecting JS called hydration.
+
+=> Reconciliation
+The algorithm React uses to diff one tree with another to determine which parts need to be changed.
+Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM."
