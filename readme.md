@@ -75,3 +75,34 @@ Reconciliation is the algorithm behind what is popularly understood as the "virt
 => Props are read-only data passed down from parent component to child component,likw we used Card components in App Component, so we can send data into Card Component from App Componenet using props.
 =>In function we have the access of props
 => They are immutable and cannot change their value once they have been assigned
+
+<!-- useCallBack (Memoization Technique) -->
+
+=>useCallback is a React Hook that lets you cache a function definition between re-renders.
+agar koi function repeat ho rh h, to use cache me rakh lo jitna har baar run ho rha hisse memory save hoti h
+research more
+
+Memoization is a technique that can be used to improve the performance of React applications. It works by caching the results of previous function calls, so that if the same function is called with the same arguments, the results can be returned immediately without having to recalculate them.
+
+<!-- //useEffect() -->
+
+Reloads the page on every change, has function and dependencies two args
+
+<!-- useRef( Hooks) -->
+
+=>used to take refrences,
+=>to get refrence, jha se bhi chaniye usme ref={} attribute lgana hoga
+=>can have any default value
+
+\***\*\*\*\*\*\*\***\*\***\*\*\*\*\*\*\***Lec 12\***\*\*\*\*\***\*\*\***\*\*\*\*\***
+REACT ROUETR DOM
+
+=> it is a third party package
+=>we have to install it
+=>gives us features like link, navlink
+
+=>Link- it used in place of a tag, a tag should not be used in react, it refreshes the page on every load
+link, a tag types kaam krta h, khudk attributes n all use krk
+it uses to in place of href
+
+=>NavLink
